@@ -1,2 +1,10 @@
 - demo_project:
  Tạo project mới bằng composer: composer create-project --prefer-dist laravel/laravel demo_project
+ ============================================== users - country ==============================================
+- Tạo database users và country
+- Checkout user_country
+- Vào phần config database và .env để cấu hình thêm 1 database mới đó là mysql2
+- Tạo thêm migration countries connection đến mysql2: 
+  php artisan make:migration create__countries__table --create=countries
+- Chạy migration: php artisan migrate
+  Thêm dữ liệu vào cho các bảng countries và users
