@@ -1,0 +1,2 @@
+- demo_project:
+ Tạo project mới bằng composer: composer create-project --prefer-dist laravel/laravel demo_project
