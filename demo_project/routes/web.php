@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use App\User;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -30,4 +30,12 @@ Route::get('getCountry', function () {
     $countries = new App\Country;
     $countries->setConnection('mysql2'); // non-static method
     dump($countries->get()->toArray());
+});
+
+Route::get('/getUsers', function () {
+    // $users = App\User::all();
+    // dump($users->toArray());
+
+    $users = User::join('country.countries as c', 'c.id', '=', 'users.users.country_id')->get();
+    dump($users->toArray());
 });
