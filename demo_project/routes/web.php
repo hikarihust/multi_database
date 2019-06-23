@@ -23,6 +23,11 @@ Route::get('getCountry', function () {
     // dump($countries);
 
     // Eloquent
+    // $countries = new App\Country;
+    // dump($countries->get()->toArray());
+
+    // setConnection 
     $countries = new App\Country;
+    $countries->setConnection('mysql2'); // non-static method
     dump($countries->get()->toArray());
 });
