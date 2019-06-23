@@ -10,3 +10,5 @@
 - Chạy migration: php artisan migrate
   Thêm dữ liệu vào cho các bảng countries và users
 - Query Builder: Truy cập vào mỗi DB bằng cách sử dụng phương thức connection() của DB
+- Tạo thêm 1 Model mới có tên là Country: php artisan make:model Country
+- Eloquent: Kết nối với DB bằng cách set giá trị cho biến connection trong Model

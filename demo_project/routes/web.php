@@ -16,8 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('getCountry', function () {
+    // Query Builder
     // $countries = DB::connection('mysql2')->table('countries')->get();
     // dump($countries);
-    $countries = DB::connection('mysql2')->table('countries')->select('*' )->get();
-    dump($countries);
+    // $countries = DB::connection('mysql2')->table('countries')->select('*' )->get();
+    // dump($countries);
+
+    // Eloquent
+    $countries = new App\Country;
+    dump($countries->get()->toArray());
 });
