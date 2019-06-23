@@ -1,2 +1,6 @@
 - demo_project:
  Tạo project mới bằng composer: composer create-project --prefer-dist laravel/laravel demo_project
+- views: tạo thêm front_page.front_page.blade.php 
+- Controller: Tạo thêm Controller mới FrontpageController
+  php artisan make:controller FrontpageController
+Keyword: live click in jquery
