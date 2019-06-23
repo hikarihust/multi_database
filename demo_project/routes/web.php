@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('getCountry', function () {
+    // $countries = DB::connection('mysql2')->table('countries')->get();
+    // dump($countries);
+    $countries = DB::connection('mysql2')->table('countries')->select('*' )->get();
+    dump($countries);
+});
